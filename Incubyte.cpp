@@ -252,3 +252,56 @@ public:
         cout << "Final Direction: " << direction << endl;
     }
 };
+
+int main()
+{
+    int x = 0, y = 0, z = 0;
+    char dir = 'N';
+    craft Chandrayaan3(x, y, z, dir, 'N');
+
+    string instruct;
+    cin >> instruct;
+    cout << endl;
+    // Chandrayaan3.PrintPosition();
+    for (int i = 0; i < instruct.length(); i++)
+    {
+        char code = instruct[i];
+        switch (code)
+        {
+        case 'f':
+            Chandrayaan3.front();
+            Chandrayaan3.PrintPosition();
+            break;
+        case 'b':
+            Chandrayaan3.back();
+            Chandrayaan3.PrintPosition();
+            break;
+        case 'l':
+            Chandrayaan3.left();
+            Chandrayaan3.PrintPosition();
+            break;
+        case 'r':
+            Chandrayaan3.right();
+            Chandrayaan3.PrintPosition();
+            break;
+        case 'u':
+            Chandrayaan3.up();
+            Chandrayaan3.PrintPosition();
+            break;
+        case 'd':
+            Chandrayaan3.down();
+            Chandrayaan3.PrintPosition();
+            break;
+        }
+    }
+
+    // Chandrayaan3.PrintPosition();
+    cout << endl;
+
+    Chandrayaan3.pos();
+    cout << endl;
+
+    Chandrayaan3.FinalDirection();
+    cout << endl;
+    return 0;
+}
