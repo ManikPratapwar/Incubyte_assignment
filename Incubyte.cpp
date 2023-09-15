@@ -234,4 +234,21 @@ public:
             direction = 'D';
         }
     }
+    // Printing x,y,z co-ordinates and direction
+    void PrintPosition()
+    {
+        cout << "Current Position: (" << x << ", " << y << ", " << z << "), Direction: " << direction << endl;
+    }
+
+    // Printing Final Position of craft
+    void pos()
+    {
+        cout << "Final Position: (" << x << ", " << y << ", " << z << ")" << endl;
+    }
+
+    // Printing Final Direction of craft
+    void FinalDirection()
+    {
+        cout << "Final Direction: " << direction << endl;
+    }
 };
