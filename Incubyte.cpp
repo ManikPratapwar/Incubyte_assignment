@@ -19,4 +19,54 @@ public:
         direction = initialDirection;
         origin = org;
     }
+    void back() // b
+    {
+        switch (direction)
+        {
+        case 'N':
+            y--;
+            break;
+        case 'S':
+            y++;
+            break;
+        case 'E':
+            x--;
+            break;
+        case 'W':
+            x++;
+            break;
+        case 'U':
+            z--;
+            break;
+        case 'D':
+            z++;
+            break;
+        }
+    }
+
+    // Moving front craft
+    void front() // f
+    {
+        switch (direction)
+        {
+        case 'N':
+            y++;
+            break;
+        case 'S':
+            y--;
+            break;
+        case 'E':
+            x++;
+            break;
+        case 'W':
+            x--;
+            break;
+        case 'U':
+            z++;
+            break;
+        case 'D':
+            z--;
+            break;
+        }
+    }
 };
